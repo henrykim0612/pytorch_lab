@@ -1,1 +1,1 @@
-온라인 자료: https://github.com/lmoroney/PyTorch-Book-FIles
+파이토치로 배우는 LLM&AI [온라인 자료](https://github.com/lmoroney/PyTorch-Book-FIles)
