@@ -61,8 +61,7 @@ def train(dataloader, model, loss_fn, optimizer):
         loss = loss_fn(pred, y)
         accuracy = get_accuracy(pred, y)
 
-        # 역전파
-        # 비유: 시험을 봤는데 틀린 문제만 보는 게 아니라, 어떤 개념 이해가 부족해서 틀렸는지를 거슬러 올라가 찾아내는 과정
+        # 역전파: 시험을 봤는데 틀린 문제만 보는 게 아니라, 어떤 개념 이해가 부족해서 틀렸는지를 거슬러 올라가 찾아내는 과정
         optimizer.zero_grad()
         loss.backward()
         optimizer.step()
