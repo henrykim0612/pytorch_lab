@@ -65,6 +65,7 @@ class HorsesHumansCNN(nn.Module):
 
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+print("Using device:", device)
 
 model = HorsesHumansCNN().to(device)
 criterion = nn.BCELoss()
