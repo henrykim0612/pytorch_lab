@@ -3,6 +3,7 @@ import torch.nn as nn
 import torch.optim as optim
 from torchvision import datasets, transforms
 from torch.utils.data import DataLoader
+from torchsummary import summary
 
 # Setup device
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -49,6 +50,8 @@ class FashionCNN(nn.Module):
 
 # Instantiate the model, loss function, and optimizer
 model = FashionCNN().to(device)
+summary(model, (1, 28, 28)) # (Channels, Height, Width)
+
 criterion = nn.CrossEntropyLoss()
 optimizer = optim.Adam(model.parameters(), lr=0.001)
 
